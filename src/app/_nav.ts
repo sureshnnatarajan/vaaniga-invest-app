@@ -49,5 +49,22 @@ export const navItems: INavData[] = [
   {
     title: true,
     name: 'Extras',
-  }
+  },
+  {
+    name: 'Extras',
+    url: '/extras',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'Blogs',
+        url: '/extras/blogs',
+        icon: 'icon-basket-loaded'
+      },
+      {
+        name: 'StockBrokers',
+        url: '/extras/stockBrokers',
+        icon: 'icon-basket-loaded'
+      }
+    ]
+  },
 ];

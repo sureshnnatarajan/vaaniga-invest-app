@@ -59,6 +59,10 @@ export const routes: Routes = [
         loadChildren: () => import('./views/mutualfunds/mutualfunds.module').then(m => m.MutualfundsModule)
       },
       {
+        path: 'extras',
+        loadChildren: () => import('./views/extras/extras.module').then(m => m.ExtrasModule)
+      },
+      {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       }
