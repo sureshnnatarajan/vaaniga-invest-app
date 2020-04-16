@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FmcgComponent } from './fmcg.component';
 import { PharmaComponent } from './pharma.component';
+import { CementComponent } from './cement.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,13 @@ const routes: Routes = [
         component: PharmaComponent,
         data: {
           title: 'Pharma'
+        }
+      },
+      {
+        path: 'cement',
+        component: CementComponent,
+        data: {
+          title: 'Cement'
         }
       }
     ]

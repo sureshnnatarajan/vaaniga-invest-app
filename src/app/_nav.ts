@@ -23,7 +23,12 @@ export const navItems: INavData[] = [
       {
         name: 'Pharma',
         url: '/sectors/pharma',
-        icon: 'icon-basket-loaded'
+        icon: 'icon-compass'
+      },
+      {
+        name: 'Cement',
+        url: '/sectors/cement',
+        icon: 'icon-energy'
       }
     ]
   },

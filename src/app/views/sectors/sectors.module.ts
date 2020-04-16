@@ -32,6 +32,7 @@ import { SectorsRoutingModule } from './sectors-routing.module';
 
 import { FmcgComponent } from './fmcg.component';
 import { PharmaComponent } from './pharma.component';
+import { CementComponent } from './cement.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { PharmaComponent } from './pharma.component';
   ],
   declarations: [
     FmcgComponent,
-    PharmaComponent
+    PharmaComponent,
+    CementComponent
   ]
 })
 export class SectorsModule { }

@@ -15,4 +15,16 @@ export class InvestAppServiceService {
   public getCompanies() {
     return this.http.get<any>(this.adminEndpoint + '/companies/all');
   }
+
+  public getCompaniesBySector(sectorName: String) {
+    return this.http.get<any>(this.adminEndpoint + '/companies/' + sectorName);
+  }
+
+  public saveLikeForCompany(company: String) {
+    return this.http.post<any>(this.adminEndpoint + '/companies/like/' + company, "");
+  }
+
+  public getLikeCountForCompany(company: String) {
+    return this.http.get<any>(this.adminEndpoint + '/companies/like/' + company);
+  }
 }
