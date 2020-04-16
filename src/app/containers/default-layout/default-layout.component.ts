@@ -8,6 +8,7 @@ import { navItems } from '../../_nav';
 export class DefaultLayoutComponent {
   public sidebarMinimized = false;
   public navItems = navItems;
+  public hideItems = 0;
 
   toggleMinimize(e) {
     this.sidebarMinimized = e;

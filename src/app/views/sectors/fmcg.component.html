@@ -1,0 +1,49 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col sm-6">
+      <h3>FMCG - Fast Moving Consumer Goods</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3" >
+      <div class="card">
+        <div class="card-body">
+          <a target="_blank"  href="https://www.amazon.in/gp/product/B00RO0BWOM/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=B00RO0BWOM&linkCode=as2&tag=vaaniga-21&linkId=b162e352d567d8af10e9a3f8fbf71b1b"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B00RO0BWOM&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=vaaniga-21" ></a><img src="//ir-in.amazon-adsystem.com/e/ir?t=vaaniga-21&l=am2&o=31&a=B00RO0BWOM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3" >
+      <div class="card">
+        <div class="card-body">
+          <a target="_blank"  href="https://www.amazon.in/gp/product/B084NXJ2ZX/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=B084NXJ2ZX&linkCode=as2&tag=vaaniga-21&linkId=8e442e7ac05c04db5dd3ea7b9104a91b"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B084NXJ2ZX&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=vaaniga-21" ></a><img src="//ir-in.amazon-adsystem.com/e/ir?t=vaaniga-21&l=am2&o=31&a=B084NXJ2ZX" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3" >
+      <div class="card">
+        <div class="card-body">
+          <a target="_blank"  href="https://www.amazon.in/gp/product/B0755J7HRX/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=B0755J7HRX&linkCode=as2&tag=vaaniga-21&linkId=5417af81300e56b5c2b718738bc9dc7a"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B0755J7HRX&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=vaaniga-21" ></a><img src="//ir-in.amazon-adsystem.com/e/ir?t=vaaniga-21&l=am2&o=31&a=B0755J7HRX" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-3" >
+      <div class="card">
+        <div class="card-body">
+          <a target="_blank"  href="https://www.amazon.in/gp/product/B00IPB6ADC/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=B00IPB6ADC&linkCode=as2&tag=vaaniga-21&linkId=98d45c3a8736683b0195f4456fc5c25f"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B00IPB6ADC&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=vaaniga-21" ></a><img src="//ir-in.amazon-adsystem.com/e/ir?t=vaaniga-21&l=am2&o=31&a=B00IPB6ADC" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3" *ngFor="let company of companies; index as i;" >
+      <div class="card">
+        <div class="card-header">
+          <h4>{{company.companyName}}</h4>
+        </div>
+        <div class="card-body">
+          Brands associated with <span style="color:brown; font-weight: bold;">{{company.companyName}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

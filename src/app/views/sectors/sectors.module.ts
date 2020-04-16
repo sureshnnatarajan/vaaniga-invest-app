@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-import { CardsComponent } from './cards.component';
-
 // Tabs Component
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
@@ -30,13 +28,16 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 // Components Routing
-import { BaseRoutingModule } from './base-routing.module';
+import { SectorsRoutingModule } from './sectors-routing.module';
+
+import { FmcgComponent } from './fmcg.component';
+import { PharmaComponent } from './pharma.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    BaseRoutingModule,
+    SectorsRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,
     CarouselModule.forRoot(),
@@ -47,7 +48,8 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipModule.forRoot()
   ],
   declarations: [
-    CardsComponent
+    FmcgComponent,
+    PharmaComponent
   ]
 })
-export class BaseModule { }
+export class SectorsModule { }

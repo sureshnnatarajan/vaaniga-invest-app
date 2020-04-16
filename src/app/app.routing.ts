@@ -51,8 +51,12 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+        path: 'sectors',
+        loadChildren: () => import('./views/sectors/sectors.module').then(m => m.SectorsModule)
+      },
+      {
+        path: 'mutualfunds',
+        loadChildren: () => import('./views/mutualfunds/mutualfunds.module').then(m => m.MutualfundsModule)
       },
       {
         path: 'dashboard',

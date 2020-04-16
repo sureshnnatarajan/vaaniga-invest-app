@@ -8,22 +8,43 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Companies'
   },
   {
-    name: 'Base',
-    url: '/base',
+    name: 'Sectors',
+    url: '/sectors',
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Cards',
-        url: '/base/cards',
-        icon: 'icon-puzzle'
+        name: 'FMCG',
+        url: '/sectors/fmcg',
+        icon: 'icon-basket-loaded'
+      },
+      {
+        name: 'Pharma',
+        url: '/sectors/pharma',
+        icon: 'icon-basket-loaded'
       }
     ]
   },
   {
     divider: true
+  },
+  {
+    title: true,
+    name: 'Mutual Funds'
+  },
+  {
+    name: 'MutualFunds',
+    url: '/mutualfunds',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'PPFAS',
+        url: '/mutualfunds/ppfas',
+        icon: 'icon-basket-loaded'
+      },
+    ]
   },
   {
     title: true,

@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { CardsComponent } from './cards.component';
+import { PpfasComponent } from './ppfas.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Base'
+      title: 'MutualFunds'
     },
     children: [
       {
         path: '',
-        redirectTo: 'cards'
+        redirectTo: 'ppfas'
       },
       {
-        path: 'cards',
-        component: CardsComponent,
+        path: 'ppfas',
+        component: PpfasComponent,
         data: {
-          title: 'Cards'
+          title: 'PPFAS'
         }
       }
     ]
@@ -29,4 +28,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BaseRoutingModule {}
+export class MutualfundsRoutingModule {}
