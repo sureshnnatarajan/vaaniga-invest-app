@@ -20,7 +20,7 @@ export const navItems: INavData[] = [
         url: '/sectors/fmcg',
         icon: 'icon-basket-loaded'
       },
-      {
+      /*{
         name: 'Pharma',
         url: '/sectors/pharma',
         icon: 'icon-compass'
@@ -29,13 +29,18 @@ export const navItems: INavData[] = [
         name: 'Cement',
         url: '/sectors/cement',
         icon: 'icon-energy'
+      },*/
+      {
+        name: 'Chemicals',
+        url: '/sectors/chemicals',
+        icon: 'icon-energy'
       }
     ]
   },
   {
     divider: true
   },
-  {
+  /*{
     title: true,
     name: 'Mutual Funds'
   },
@@ -54,22 +59,22 @@ export const navItems: INavData[] = [
   {
     title: true,
     name: 'Extras',
-  },
+  },*/
   {
     name: 'Extras',
     url: '/extras',
     icon: 'icon-puzzle',
     children: [
       {
-        name: 'Blogs',
-        url: '/extras/blogs',
-        icon: 'icon-basket-loaded'
-      },
-      {
+        name: 'Learn',
+        url: '/extras/learn',
+        icon: 'fa fa-book'
+      }
+      /*{
         name: 'StockBrokers',
         url: '/extras/stockBrokers',
         icon: 'icon-basket-loaded'
-      }
+      }*/
     ]
   },
 ];

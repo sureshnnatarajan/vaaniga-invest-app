@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlogsComponent } from './blogs.component';
+import { LearnComponent } from './learn.component';
 import { StockbrokersComponent } from './stockbrokers.component';
 
 const routes: Routes = [
@@ -12,22 +12,23 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'blogs'
+        redirectTo: 'learn'
       },
       {
-        path: 'blogs',
-        component: BlogsComponent,
+        path: 'learn',
+        component: LearnComponent,
         data: {
-          title: 'Blogs'
+          title: 'Learn'
         }
-      },
+      }
+      /*
       {
         path: 'stockBrokers',
         component: StockbrokersComponent,
         data: {
           title: 'StockBrockers'
         }
-      }
+      }*/
     ]
   }
 ];

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FmcgComponent } from './fmcg.component';
 import { PharmaComponent } from './pharma.component';
 import { CementComponent } from './cement.component';
+import { ChemicalsComponent } from './chemicals.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,13 @@ const routes: Routes = [
         component: CementComponent,
         data: {
           title: 'Cement'
+        }
+      },
+      {
+        path: 'chemicals',
+        component: ChemicalsComponent,
+        data: {
+          title: 'Chemicals'
         }
       }
     ]

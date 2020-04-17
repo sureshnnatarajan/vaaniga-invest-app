@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { InvestAppServiceService } from '../invest-app-service.service';
 
 @Component({
-  templateUrl: 'fmcg.component.html'
+  selector: 'app-chemicals',
+  templateUrl: './chemicals.component.html'
 })
-export class FmcgComponent implements OnInit {
+export class ChemicalsComponent implements OnInit {
 
   companies : any;
 
@@ -16,11 +17,19 @@ export class FmcgComponent implements OnInit {
 
   loadFmcgData() {
     this.investAppServiceService
-                      .getCompaniesBySector('fmcg')
+                      .getCompaniesBySector('chemicals')
                       .subscribe(
-                        res => { this.companies = res.results; }, 
-                        err => {},
-                        () => {});
+                        res => {
+                          console.log(res);
+                          this.companies = res.results;
+                          //this.loadLikeCount(this.companies);  
+                        }, 
+                        err => {
+
+                        },
+                        () => {
+
+                        });
   }
 
   loadLikeCount(companies: any) {

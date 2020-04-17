@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Tabs Component
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
-import { BlogsComponent } from './blogs.component';
 import { StockbrokersComponent } from './stockbrokers.component';
 import { ExtrasRoutingModule } from './extras-routing.module';
+import { LearnComponent } from './learn.component';
 
 @NgModule({
-  declarations: [BlogsComponent, StockbrokersComponent],
+  declarations: [LearnComponent, StockbrokersComponent],
   imports: [
     CommonModule,
-    ExtrasRoutingModule
+    ExtrasRoutingModule,
+    TabsModule
   ]
 })
 export class ExtrasModule { }
