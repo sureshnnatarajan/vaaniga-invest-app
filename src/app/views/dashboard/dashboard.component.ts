@@ -55,4 +55,8 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e: any): void {
     //console.log(e);
   }
+
+  public chartClicked(e: any): void {
+    //console.log(e);
+  }
 }

@@ -19,17 +19,9 @@ export class ChemicalsComponent implements OnInit {
     this.investAppServiceService
                       .getCompaniesBySector('chemicals')
                       .subscribe(
-                        res => {
-                          console.log(res);
-                          this.companies = res.results;
-                          //this.loadLikeCount(this.companies);  
-                        }, 
-                        err => {
-
-                        },
-                        () => {
-
-                        });
+                        res => { this.companies = res.results; }, 
+                        err => { },
+                        () => { });
   }
 
   loadLikeCount(companies: any) {
