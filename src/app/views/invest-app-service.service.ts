@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class InvestAppServiceService {
 
   adminEndpoint = environment.invest_api_endpoint;
+  dashBoardEndPoint = environment.invest_api_dashboard_endpoint;
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,9 @@ export class InvestAppServiceService {
 
   public getLikeCountForCompany(company: String) {
     return this.http.get<any>(this.adminEndpoint + '/companies/like/' + company);
+  }
+
+  public getProductCountBySector(sectorName: String) {
+    return this.http.get<any>(this.dashBoardEndPoint + '/productCount/' + sectorName);
   }
 }
