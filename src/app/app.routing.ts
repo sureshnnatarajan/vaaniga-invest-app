@@ -65,6 +65,10 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'search',
+        loadChildren: () => import('./views/global-search/global-search.module').then(m => m.GlobalSearchModule)
       }
     ]
   },

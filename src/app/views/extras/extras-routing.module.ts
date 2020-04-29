@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LearnComponent } from './learn.component';
 import { StockbrokersComponent } from './stockbrokers.component';
+import { ReferandearnComponent } from './referandearn.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,13 @@ const routes: Routes = [
         component: LearnComponent,
         data: {
           title: 'Learn'
+        }
+      },
+      {
+        path: 'earn',
+        component: ReferandearnComponent,
+        data: {
+          title: 'Earn'
         }
       }
       /*

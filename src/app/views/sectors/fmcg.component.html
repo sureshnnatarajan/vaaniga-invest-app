@@ -38,10 +38,9 @@
     <div class="col-sm-6 col-md-3" *ngFor="let company of companies; index as i;" >
       <div class="card">
         <div class="card-header">
-          <h4>{{company.companyName}}
-            <a [routerLink]="" (click)="saveLike(company.companyName)" class="c-header-nav-link"><span><i class="fa fa-thumbs-o-up float-right"></i></span></a>
-            <span class="badge badge-pill badge-info float-right">5</span>
-          </h4>
+          <h4><a [routerLink]="" (click)="saveLike(company.companyName)" class="c-header-nav-link"><span><i class="fa fa-thumbs-o-down float-right"></i></span></a></h4>
+          <h4>{{company.companyName}}</h4>
+          <h4><a [routerLink]="" (click)="saveLike(company.companyName)" class="c-header-nav-link"><span><i class="fa fa-thumbs-o-up float-right"></i></span></a></h4>
         </div>
         <div class="card-body">
           Brands associated with <span style="color:brown; font-weight: bold;">{{company.companyName}}</span>

@@ -7,6 +7,11 @@ export const navItems: INavData[] = [
     icon: 'icon-speedometer'
   },
   {
+    name: 'Search',
+    url: '/search',
+    icon: 'fa fa-search'
+  },
+  {
     title: true,
     name: 'Companies'
   },
@@ -63,12 +68,17 @@ export const navItems: INavData[] = [
   {
     name: 'Extras',
     url: '/extras',
-    icon: 'icon-puzzle',
+    icon: 'fa fa-share-alt',
     children: [
       {
         name: 'Learn',
         url: '/extras/learn',
         icon: 'fa fa-book'
+      },
+      {
+        name: 'Earn',
+        url: '/extras/earn',
+        icon: 'fa fa-money'
       }
       /*{
         name: 'StockBrokers',

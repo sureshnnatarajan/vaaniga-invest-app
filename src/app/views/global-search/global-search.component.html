@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
+            <div class="form-group row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Search using a keyword. Example: Biscuits">
+                    <span class="input-group-prepend">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                      </span>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
+            <h6>Frequently searched keywords...</h6>
+        </div>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
+            <angular-tag-cloud [config]="options" [data]="data"></angular-tag-cloud>
+        </div>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+</div>
+
