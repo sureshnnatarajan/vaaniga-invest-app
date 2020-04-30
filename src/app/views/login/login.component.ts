@@ -29,6 +29,12 @@ export class LoginComponent {
     this.router.navigate(['forgot']);
   }
 
+  createAccount() {
+    
+    //Added this after form validation
+    this.formReset();
+  }
+
   onLoginSubmit() {
     this.formReset();
   }
