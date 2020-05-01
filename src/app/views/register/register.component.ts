@@ -21,12 +21,36 @@ export class RegisterComponent {
   constructor(private router: Router, private registerService: RegisterService) {}
 
   createAccount() {
-    this.formReset();
-    console.log(this.firstName, this.lastName, this.mobileNumber, this.email, this.password, this.repeatPassword);
+    //console.log(this.firstName, this.lastName, this.mobileNumber, this.email, this.password, this.repeatPassword);
     if (this.password !== this.repeatPassword) {
       this.errorMessage = "Passwords do not match!";
       return;
     }
+
+    let obj : any = 
+    {
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "mobileNumber" : ""
+    };
+
+    obj.email = this.email;
+    obj.firstName = this.firstName;
+    obj.lastName = this.lastName;
+    obj.mobileNumber = this.mobileNumber;
+
+    this.registerService.signupUser(obj)
+                        .subscribe(
+                          res => { 
+                            console.log(res.executionTime);
+                            this.router.navigate(['dashboard']);
+                          }, 
+                          err => {},
+                          () => {
+                            this.formReset();
+                          }
+                        );
   }
 
   onSignUpSubmit() {
