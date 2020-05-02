@@ -16,4 +16,8 @@ export class RegisterService {
   signupUser(userObj: any) {
     return this.http.post<any>(this.signupEndPoint, userObj);
   }
+
+  signupSocial(appName: String) {
+    return this.http.get(this.signupEndPoint + "social/" + appName);
+  }
 }

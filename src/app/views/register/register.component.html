@@ -1,58 +1,80 @@
 <div class="app-body">
-  <main class="main d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="card mx-4">
-            <div class="card-body p-4">
-              <form #signUpForm="ngForm" (ngSubmit)="onSignUpSubmit()" >
-                <h1>Register</h1>
-                <p class="text-muted">Create your account</p>
-                <div id="errorMessageDiv" style="color: crimson;">
-                  {{errorMessage}}
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+  <div class="col-md-3 mb-4"></div>
+  <div class="col-md-6 mb-4">
+    <tabset>
+      <tab>
+        <ng-template tabHeading><i class="icon-calculator"></i> Sign up Using Social Login</ng-template>
+        <div class="col-6">  
+            <button (click)="socialSignIn('facebook')" class="btn btn-block">  
+                Login with Facebook  
+            </button>  
+        </div>  
+        <div class="col-6 text-right">  
+            <button (click)="socialSignIn('google')"  class="btn btn-block">  
+                Login with Google  
+            </button>  
+        </div>  
+      </tab>
+      <tab>
+        <ng-template tabHeading><i class="icon-calculator"></i> Sign up Using Email</ng-template>
+        <main class="main d-flex align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <div class="card mx-4">
+                  <div class="card-body p-4">
+                    <form #signUpForm="ngForm" (ngSubmit)="onSignUpSubmit()" >
+                      <h1>Register</h1>
+                      <p class="text-muted">Create your account</p>
+                      <div id="errorMessageDiv" style="color: crimson;">
+                        {{errorMessage}}
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="First Name" autocomplete="firstName" required [(ngModel)]="firstName" name="firstName">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Last Name" autocomplete="lastName" required [(ngModel)]="lastName" name="lastName">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa fa-phone"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Mobile Number" autocomplete="mobileNumber" required [(ngModel)]="mobileNumber" name="mobileNumber">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email" autocomplete="email" required [(ngModel)]="email" name="email">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="icon-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password. Minimum length 8 characters." autocomplete="new-password" required minlength="8" [(ngModel)]="password" name="password">
+                      </div>
+                      <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="icon-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required minlength="8" [(ngModel)]="repeatPassword" name="repeatPassword">
+                      </div>
+                      <button type="button" class="btn btn-block btn-success" [disabled]="!signUpForm.valid" (click)="createAccount(); signUpForm.reset();">Create Account</button>
+                    </form>
                   </div>
-                  <input type="text" class="form-control" placeholder="First Name" autocomplete="firstName" required [(ngModel)]="firstName" name="firstName">
                 </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-user"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Last Name" autocomplete="lastName" required [(ngModel)]="lastName" name="lastName">
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa fa-phone"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Mobile Number" autocomplete="mobileNumber" required [(ngModel)]="mobileNumber" name="mobileNumber">
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Email" autocomplete="email" required [(ngModel)]="email" name="email">
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="icon-lock"></i></span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="Password. Minimum length 8 characters." autocomplete="new-password" required minlength="8" [(ngModel)]="password" name="password">
-                </div>
-                <div class="input-group mb-4">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="icon-lock"></i></span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required minlength="8" [(ngModel)]="repeatPassword" name="repeatPassword">
-                </div>
-                <button type="button" class="btn btn-block btn-success" [disabled]="!signUpForm.valid" (click)="createAccount(); signUpForm.reset();">Create Account</button>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </main>
+        </main>
+      </tab>
+    </tabset>
+  </div>
+  <div class="col-md-3 mb-4"></div>
 </div>

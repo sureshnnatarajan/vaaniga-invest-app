@@ -62,4 +62,13 @@ export class RegisterComponent {
     this.submitted = true;
     this.errorMessage = '';
   }
+
+  socialSignIn(appName) {
+    this.registerService.signupSocial(appName)
+                        .subscribe(
+                          res => {
+                            console.log("" + res);
+                          }
+                        );
+  }
 }
