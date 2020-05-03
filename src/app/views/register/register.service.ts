@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +17,12 @@ export class RegisterService {
   }
 
   signupSocial(appName: String) {
-    return this.http.get(this.signupEndPoint + "social/" + appName);
+    let url = this.signupEndPoint + "social/" + appName;
+    /*return this.http.get<String>(url, {
+      headers: new HttpHeaders({'Content-Type': 'application/json',  accept: 'text/plain'}),
+      responseType: 'text'
+    });*/
+
+    return this.http.get<String>(url);
   }
 }

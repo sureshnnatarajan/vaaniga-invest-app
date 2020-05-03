@@ -22,10 +22,10 @@ export class RegisterComponent {
 
   createAccount() {
     //console.log(this.firstName, this.lastName, this.mobileNumber, this.email, this.password, this.repeatPassword);
-    if (this.password !== this.repeatPassword) {
+    /*if (this.password !== this.repeatPassword) {
       this.errorMessage = "Passwords do not match!";
       return;
-    }
+    } */
 
     let obj : any = 
     {
@@ -67,7 +67,11 @@ export class RegisterComponent {
     this.registerService.signupSocial(appName)
                         .subscribe(
                           res => {
-                            console.log("" + res);
+                            console.log("1" + res);
+                            console.log("2" + res.toString());
+                            let reUrl = res.toString().substring((res.toString().indexOf(":"))+1, res.toString().length);
+                            console.log("reUrl ==>" + reUrl);
+                            window.location.href = reUrl;
                           }
                         );
   }

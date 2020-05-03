@@ -1,5 +1,5 @@
 <div class="app-body">
-  <div class="col-md-3 mb-4"></div>
+  <!-- <div class="col-md-3 mb-4"></div>
   <div class="col-md-6 mb-4">
     <tabset>
       <tab>
@@ -16,7 +16,7 @@
         </div>  
       </tab>
       <tab>
-        <ng-template tabHeading><i class="icon-calculator"></i> Sign up Using Email</ng-template>
+        <ng-template tabHeading><i class="icon-calculator"></i> Sign up Using Email</ng-template> -->
         <main class="main d-flex align-items-center">
           <div class="container">
             <div class="row">
@@ -53,7 +53,7 @@
                         </div>
                         <input type="text" class="form-control" placeholder="Email" autocomplete="email" required [(ngModel)]="email" name="email">
                       </div>
-                      <div class="input-group mb-3">
+                      <!-- <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
@@ -64,7 +64,7 @@
                           <span class="input-group-text"><i class="icon-lock"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Repeat password" autocomplete="new-password" required minlength="8" [(ngModel)]="repeatPassword" name="repeatPassword">
-                      </div>
+                      </div> -->
                       <button type="button" class="btn btn-block btn-success" [disabled]="!signUpForm.valid" (click)="createAccount(); signUpForm.reset();">Create Account</button>
                     </form>
                   </div>
@@ -73,8 +73,8 @@
             </div>
           </div>
         </main>
-      </tab>
+      <!-- </tab>
     </tabset>
   </div>
-  <div class="col-md-3 mb-4"></div>
+  <div class="col-md-3 mb-4"></div> -->
 </div>
