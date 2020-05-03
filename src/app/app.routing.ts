@@ -63,6 +63,10 @@ export const routes: Routes = [
         loadChildren: () => import('./views/sectors/sectors.module').then(m => m.SectorsModule)
       },
       {
+        path: 'listedCompanies',
+        loadChildren: () => import('./views/listed-companies/listed-companies.module').then(m => m.ListedCompaniesModule)
+      },
+      {
         path: 'mutualfunds',
         loadChildren: () => import('./views/mutualfunds/mutualfunds.module').then(m => m.MutualfundsModule)
       },

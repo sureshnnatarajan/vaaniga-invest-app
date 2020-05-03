@@ -2,7 +2,7 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Dashboard',
+    name: 'Home',
     url: '/dashboard',
     icon: 'icon-speedometer'
   },
@@ -12,9 +12,14 @@ export const navItems: INavData[] = [
     icon: 'fa fa-search'
   },
   {
+    name: 'ListedCompanies',
+    url: '/listedCompanies',
+    icon: 'fa fa-list'
+  },
+  /*{
     title: true,
     name: 'Companies'
-  },
+  },*/
   {
     name: 'Sectors',
     url: '/sectors',

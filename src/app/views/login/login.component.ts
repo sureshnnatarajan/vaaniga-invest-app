@@ -30,7 +30,6 @@ export class LoginComponent {
   }
 
   createAccount() {
-    
     //Added this after form validation
     this.formReset();
   }

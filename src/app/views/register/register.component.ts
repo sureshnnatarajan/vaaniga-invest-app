@@ -42,15 +42,14 @@ export class RegisterComponent {
 
     this.registerService.signupUser(obj)
                         .subscribe(
-                          res => { 
-                            console.log(res.executionTime);
-                            this.router.navigate(['dashboard']);
-                          }, 
+                          res => { this.storeSignupStatus(res); }, 
                           err => {},
-                          () => {
-                            this.formReset();
-                          }
+                          () => { this.formReset(); }
                         );
+  }
+
+  storeSignupStatus(res: any) {
+    this.router.navigate(['listedCompanies']);
   }
 
   onSignUpSubmit() {

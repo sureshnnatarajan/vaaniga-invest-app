@@ -1,0 +1,86 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-10">
+            <div class="form-group row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <input type="text" id="input1-group2" name="input1-group2" class="form-control form-control-lg" placeholder="Search company Name. Example: ITC">
+                    <span class="input-group-prepend">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                      </span>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-1">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
+            <h6>Frequently searched Companies...</h6>
+        </div>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
+            <h6>ITC, HUL, Reliance, TCS, Sun Pharma, HDFC, SBI</h6>
+        </div>
+        <div class="col-sm-3">&nbsp;</div>
+    </div>
+    <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h6><i class="fa fa-info"></i> (Market capitalization) = (Cost per share) x (Number of shares)</h6>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fa fa-graduation-cap"></i> Large Caps</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li *ngFor="let largeCap of largeCapCompanies; index as i;">
+                            <span style="color:green; font-weight: bold;">{{largeCap.companyName}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fa fa-graduation-cap"></i> Mid Caps</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li *ngFor="let midCap of midCapCompanies; index as i;">
+                            <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fa fa-graduation-cap"></i> Small Caps</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li *ngFor="let smallCap of smallCapCompanies; index as i;">
+                            <span style="color:brown; font-weight: bold;">{{smallCap.companyName}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
