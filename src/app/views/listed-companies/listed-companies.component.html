@@ -32,23 +32,38 @@
     <div class="row"><div class="col-sm-12">&nbsp;</div></div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    <h6><i class="fa fa-info"></i> (Market capitalization) = (Cost per share) x (Number of shares)</h6>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6><i class="fa fa-info"></i> (Market capitalization) = (Cost per share) x (Number of outstanding shares)</h6>
+                        </div>
+                    </div>
                 </div>
-            </div>    
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6><b>Large Cap </b> = 1st - 100th company in terms of full market capitalization</h6>
+                            <h6><b>Mid Cap </b> = 101st - 250th company in terms of full market capitalization</h6>
+                            <h6><b>Small Cap </b> = 251st company onwards in terms of full market capitalization</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h5><i class="fa fa-graduation-cap"></i> Large Caps</h5>
+                    <h5><i class="fa fa-graduation-cap"></i> Large Caps <span style="float: right;">Total Count : {{largeCapCompaniesCount}}</span></h5>
                 </div>
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let largeCap of largeCapCompanies; index as i;">
-                            <span style="color:green; font-weight: bold;">{{largeCap.companyName}}</span>
+                            <a href="https://www.screener.in/company/{{largeCap.bseSymbol}}/consolidated/" target="_blank">
+                                <span style="color:green; font-weight: bold;">{{largeCap.companyName}}</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -57,12 +72,14 @@
         <div class="col-sm-6 col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h5><i class="fa fa-graduation-cap"></i> Mid Caps</h5>
+                    <h5><i class="fa fa-graduation-cap"></i> Mid Caps <span style="float: right;">Total Count : {{midCapCompaniesCount}}</span></h5>
                 </div>
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let midCap of midCapCompanies; index as i;">
-                            <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                            <a href="https://www.screener.in/company/{{midCap.bseSymbol}}/consolidated/" target="_blank">
+                                <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -71,12 +88,14 @@
         <div class="col-sm-6 col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h5><i class="fa fa-graduation-cap"></i> Small Caps</h5>
+                    <h5><i class="fa fa-graduation-cap"></i> Small Caps <span style="float: right;">Total Count : {{smallCapCompaniesCount}}</span></h5>
                 </div>
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let smallCap of smallCapCompanies; index as i;">
-                            <span style="color:brown; font-weight: bold;">{{smallCap.companyName}}</span>
+                            <a href="https://www.screener.in/company/{{smallCap.bseSymbol}}/consolidated/" target="_blank">
+                                <span style="color:brown; font-weight: bold;">{{smallCap.companyName}}</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

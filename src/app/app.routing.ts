@@ -13,7 +13,7 @@ import { ForgotPasswordComponent } from './views/forgot-password/forgot-password
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'listedCompanies',
     pathMatch: 'full',
   },
   {

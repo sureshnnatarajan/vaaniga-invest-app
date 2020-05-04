@@ -1,7 +1,7 @@
 import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
-  {
+  /*{
     name: 'Home',
     url: '/dashboard',
     icon: 'icon-speedometer'
@@ -10,7 +10,7 @@ export const navItems: INavData[] = [
     name: 'Search',
     url: '/search',
     icon: 'fa fa-search'
-  },
+  },*/
   {
     name: 'ListedCompanies',
     url: '/listedCompanies',
@@ -20,6 +20,7 @@ export const navItems: INavData[] = [
     title: true,
     name: 'Companies'
   },*/
+  /*
   {
     name: 'Sectors',
     url: '/sectors',
@@ -30,7 +31,7 @@ export const navItems: INavData[] = [
         url: '/sectors/fmcg',
         icon: 'icon-basket-loaded'
       },
-      /*{
+      {
         name: 'Pharma',
         url: '/sectors/pharma',
         icon: 'icon-compass'
@@ -39,7 +40,7 @@ export const navItems: INavData[] = [
         name: 'Cement',
         url: '/sectors/cement',
         icon: 'icon-energy'
-      },*/
+      },
       {
         name: 'Chemicals',
         url: '/sectors/chemicals',
@@ -49,7 +50,7 @@ export const navItems: INavData[] = [
   },
   {
     divider: true
-  },
+  },*/
   /*{
     title: true,
     name: 'Mutual Funds'
@@ -80,11 +81,11 @@ export const navItems: INavData[] = [
         url: '/extras/learn',
         icon: 'fa fa-book'
       },
-      {
+      /*{
         name: 'Earn',
         url: '/extras/earn',
         icon: 'fa fa-money'
-      }
+      }*/
       /*{
         name: 'StockBrokers',
         url: '/extras/stockBrokers',
