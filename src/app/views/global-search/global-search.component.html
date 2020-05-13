@@ -1,7 +1,7 @@
 <div class="animated fadeIn">
     <div class="row">
-        <div class="col-sm-3">&nbsp;</div>
-        <div class="col-sm-6">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-10">
             <div class="form-group row">
                 <div class="col-md-12">
                   <div class="input-group">
@@ -13,21 +13,37 @@
                 </div>
               </div>
         </div>
-        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-1">&nbsp;</div>
     </div>
     <div class="row">
-        <div class="col-sm-3">&nbsp;</div>
-        <div class="col-sm-6">
-            <h6>Frequently searched keywords...</h6>
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-10">
+            <h6><b>Frequently searched keywords...</b></h6>
+            <div>Soap, Biscuit, Shampoo, Bank</div>
         </div>
-        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-1">&nbsp;</div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-sm-3">&nbsp;</div>
         <div class="col-sm-6">
             <angular-tag-cloud [config]="options" [data]="data"></angular-tag-cloud>
         </div>
         <div class="col-sm-3">&nbsp;</div>
+    </div> -->
+    <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+    <div class="row">
+        <div class="col-sm-6 col-md-3" *ngFor="let searchResult of keywordSearchResults; index as i;">
+            <div class="card">
+                <div class="card-header">
+                    <h5>{{searchResult.brandName}}</h5>
+                </div>
+                <div class="card-body">
+                    <a href="https://www.screener.in/company/{{searchResult.companyName}}/consolidated/" target="_blank">
+                        <span style="color:green; font-weight: bold;">{{searchResult.companyName}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

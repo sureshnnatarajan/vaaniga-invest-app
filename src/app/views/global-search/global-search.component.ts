@@ -7,7 +7,23 @@ import { CloudData, CloudOptions } from 'angular-tag-cloud-module';
 })
 export class GlobalSearchComponent implements OnInit {
 
-  constructor() { }
+  keywordSearchResults : any[] = [];
+  keywordSearchResultsCount = 0;
+
+  sampleResults = {
+    brandName : "Vivel",
+    companyName : "ITC",
+    mutualFunds : [
+      {
+        name : "Aditya Birla"
+      }
+    ]
+  }
+
+  constructor() { 
+    this.keywordSearchResults.push(this.sampleResults);
+    this.keywordSearchResultsCount = this.keywordSearchResults.length;
+  }
 
   ngOnInit(): void {
   }
@@ -26,7 +42,6 @@ export class GlobalSearchComponent implements OnInit {
     {text: 'Soap', weight: 7, link: 'https://vaaniga.com', color: '#ffaaee'},
     {text: 'Chocolate', weight: 4, link: 'https://vaaniga.com', color: '#ffaaee'},
     {text: 'Deodorants', weight: 9, link: 'https://vaaniga.com', color: '#ffaaee'},
-
   ];
 
 }
