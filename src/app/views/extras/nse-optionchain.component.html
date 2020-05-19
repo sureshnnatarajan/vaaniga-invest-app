@@ -1,0 +1,75 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <form [formGroup]="optionChainForm" >
+                        <div class="row">
+                            <div class="form-group col-sm-4">
+                              <label for="ccmonth">Indices</label>
+                              <select class="form-control" id="optionContracts" formControlName="optionContracts" (change)="indicesChange()">
+                                <option *ngFor="let option of optionContractsTypes" [ngValue]="option">{{option}}</option>
+                              </select>  
+                            </div>
+                            <div class="form-group col-sm-4">
+                              <label for="ccyear">Expiry Date</label>
+                              <input type="text" class="form-control" id="cvv" placeholder="21-May-2020">
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group">
+                                <label for="cvv">Strike Price</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="6500">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">&nbsp;</div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                            </div>
+                            <div class="col-md-4">&nbsp;</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr style="font-size: 0.675rem !important;">
+                                <th>Expiry Date 
+                                    <i class="fa fa-arrow-circle-down" (click) = "sortFilteredRecords(toggleExpiryDate)"></i>
+                                </th>
+                                <th>Strike Price</th>
+                                <th>Identifier</th>
+                                <th>Underlying</th>
+                                <th>Calls OI</th>
+                                <th>Calls Change in OI</th>
+                                <th>Calls LTP</th>
+                                <th>Calls Net Change</th>
+                                <th>Puts OI</th>
+                                <th>Puts Change in OI</th>
+                                <th>Puts LTP</th>
+                                <th>Puts Net Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 0.675rem !important;" *ngFor="let data of filteredRecords; index as i;">
+                                <td>{{data.expiryDate}}</td>
+                                <td>{{data.strikePrice}}</td>
+                                <td>{{data.CE?.identifier || data.PE?.identifier || ''}}</td>
+                                <td>{{data.CE?.underlying || ''}}</td>
+                                <td>{{data.CE?.openInterest || ''}}</td>
+                                <td>{{data.CE?.changeinOpenInterest || ''}}</td>
+                                <td >{{data.CE.lastPrice}}</td>
+                                <td >{{data.CE.pchangeinOpenInterest || ''}}</td>
+                                <td >{{data.PE?.openInterest || ''}}</td>
+                                <td >{{data.PE?.changeinOpenInterest || ''}}</td>
+                                <td >{{data.PE.lastPrice}}</td>
+                                <td >{{data.PE?.pchangeinOpenInterest || ''}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

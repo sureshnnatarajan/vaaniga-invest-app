@@ -5,12 +5,24 @@ export const navItems: INavData[] = [
     name: 'Home',
     url: '/dashboard',
     icon: 'icon-speedometer'
-  },
-  {
-    name: 'Search',
-    url: '/search',
-    icon: 'fa fa-search'
   },*/
+  {
+    name: 'Global Search',
+    url: '/search',
+    icon: 'icon-globe',
+    children: [
+      {
+        name: 'Keyword Search',
+        url: '/search',
+        icon: 'fa fa-search'
+      },
+      {
+        name: 'Product Search',
+        url: '/search/product-search/',
+        icon: 'fa fa-product-hunt'
+      }
+    ]
+  },
   {
     name: 'ListedCompanies',
     url: '/listedCompanies',
@@ -80,6 +92,11 @@ export const navItems: INavData[] = [
         name: 'Learn',
         url: '/extras/learn',
         icon: 'fa fa-book'
+      },
+      {
+        name: 'NSE Option',
+        url: '/extras/nseoption',
+        icon: 'fa fa-money'
       },
       /*{
         name: 'Earn',

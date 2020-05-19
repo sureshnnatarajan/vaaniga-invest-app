@@ -1,0 +1,63 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <!-- <form [formGroup]="companySearchForm" (ngSubmit)="onSubmit()">-->
+                    <!-- <form (ngSubmit)="onSubmit()"> -->
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                              <label for="companyName">Company Name</label>
+                              <!-- <input type="text" class="form-control" id="companyName" placeholder="ITC" formControlName="companyName"> -->
+                              <input type="text" class="form-control" id="companyName" placeholder="ITC" [formControl]="companyName">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">&nbsp;</div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary" (click)="onSubmit();"><i class="fa fa-search"></i> Search</button>
+                            </div>
+                            <div class="col-md-4">&nbsp;</div>
+                        </div>
+                    <!-- </form> -->
+                </div>
+                <div class="card-body">
+                    <!-- <table class="table">
+                        <thead>
+                            <tr style="font-size: 0.775rem !important;">
+                                <th>Company Name </th>
+                                <th>Product Name <i class="fa fa-arrow-circle-down"></i></th>
+                                <th>Keywords</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 0.775rem !important;" *ngFor="let data of companyRecords; index as i;">
+                                <td>{{data.companyName}}</td>
+                                <td>{{data.productName}}</td>
+                                <td>{{data.productKeywords}}</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                    <div class="row card-group">
+                        <div class="col-sm-4" *ngFor="let data of companyRecords; index as i;" >
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">{{data.companyName}}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">{{data.productName}}</h4>
+                                </div>
+                                <div class="card-footer">
+                                    <div>
+                                        <h4>Keywords</h4>
+                                        {{data.productKeywords}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

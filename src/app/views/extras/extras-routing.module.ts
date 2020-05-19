@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LearnComponent } from './learn.component';
 import { StockbrokersComponent } from './stockbrokers.component';
 import { ReferandearnComponent } from './referandearn.component';
+import { NseOptionchainComponent } from './nse-optionchain.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,13 @@ const routes: Routes = [
         component: LearnComponent,
         data: {
           title: 'Learn'
+        }
+      },
+      {
+        path: 'nseoption',
+        component: NseOptionchainComponent,
+        data: {
+          title: 'NSE Option'
         }
       },
       {

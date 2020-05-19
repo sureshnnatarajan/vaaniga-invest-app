@@ -11,6 +11,7 @@ export class InvestAppServiceService {
   adminEndpoint = environment.invest_api_endpoint;
   dashBoardEndPoint = environment.invest_api_dashboard_endpoint;
   investDataEndPoint = environment.vaaniga_invest_data_endpoint;
+  nseOptionsEndPoint = environment.invest_api_nseoptions_endpoint;
 
   constructor(private http: HttpClient) { }
 
@@ -36,5 +37,13 @@ export class InvestAppServiceService {
 
   public getListedCompanies() {
     return this.http.get<any>(this.investDataEndPoint + 'listedCompanies');
+  }
+
+  public getOptionChainIndices(symbol: String) {
+    return this.http.get<any>(this.nseOptionsEndPoint + '/optionChainIndices/?symbol=' + symbol);
+  }
+
+  public getCompanyProducts(companyName: String) {
+    return this.http.get<any>(this.adminEndpoint + '/companies/' + companyName +'/products');
   }
 }
