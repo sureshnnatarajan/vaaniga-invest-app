@@ -77,9 +77,25 @@
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let midCap of midCapCompanies; index as i;">
-                            <a href="https://www.screener.in/company/{{midCap.bseSymbol}}/consolidated/" target="_blank">
-                                <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
-                            </a>
+                            <ng-container *ngIf="listedInNseAndBse.includes(midCap); then bse"></ng-container>
+                            <ng-container *ngIf="notListedInBse.includes(midCap); then nse"></ng-container>
+                            <ng-container *ngIf="notListedInNse.includes(midCap);"></ng-container>
+
+                            <ng-template #bse>
+                                <a href="https://www.screener.in/company/{{midCap.bseSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                                </a>
+                            </ng-template>
+                            <ng-template #nse>
+                                <a href="https://www.screener.in/company/{{midCap.nseSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                                </a>
+                            </ng-template>
+                            <ng-template >
+                                <a href="https://www.screener.in/company/{{midCap.mcxSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{midCap.companyName}}</span>
+                                </a>
+                            </ng-template>
                         </li>
                     </ul>
                 </div>
@@ -93,9 +109,28 @@
                 <div class="card-body">
                     <ul>
                         <li *ngFor="let smallCap of smallCapCompanies; index as i;">
-                            <a href="https://www.screener.in/company/{{smallCap.bseSymbol}}/consolidated/" target="_blank">
+                            <ng-container *ngIf="listedInNseAndBse.includes(smallCap); then bse"></ng-container>
+                            <ng-container *ngIf="notListedInBse.includes(smallCap); then nse"></ng-container>
+                            <ng-container *ngIf="notListedInNse.includes(smallCap);"></ng-container>
+
+                            <ng-template #bse>
+                                <a href="https://www.screener.in/company/{{smallCap.bseSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{smallCap.companyName}}</span>
+                                </a>
+                            </ng-template>
+                            <ng-template #nse>
+                                <a href="https://www.screener.in/company/{{smallCap.nseSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{smallCap.companyName}}</span>
+                                </a>
+                            </ng-template>
+                            <ng-template >
+                                <a href="https://www.screener.in/company/{{smallCap.mcxSymbol}}/consolidated/" target="_blank">
+                                    <span style="color:orange; font-weight: bold;">{{smallCap.companyName}}</span>
+                                </a>
+                            </ng-template>
+                            <!-- <a href="https://www.screener.in/company/{{smallCap.bseSymbol}}/consolidated/" target="_blank">
                                 <span style="color:brown; font-weight: bold;">{{smallCap.companyName}}</span>
-                            </a>
+                            </a> -->
                         </li>
                     </ul>
                 </div>
